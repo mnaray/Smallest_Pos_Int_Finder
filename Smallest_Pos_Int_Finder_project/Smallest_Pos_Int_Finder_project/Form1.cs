@@ -28,22 +28,23 @@ namespace Smallest_Pos_Int_Finder_project
             string[] fileContentsString = File.ReadAllLines(path);
             int[] fileContentsInteger = Array.ConvertAll(fileContentsString, s => int.Parse(s));
 
-            // MyFunction
+            solution.Text = SmallestPositiveInt(fileContentsInteger).ToString();
         }
+
+
+
         public static int SmallestPositiveInt(int[] A)
         {
-            int currentNum = 1;
             int solution = 0;
+            Array.Sort(A);
 
-            while (true)
+            foreach (int item in A)
             {
-                if (!(Array.Exists(A, ele => ele == currentNum)))
+                if (!Array.Exists(A, ele => ele == item) && item > 0)
                 {
-                    solution = currentNum;
+                    solution = item;
                     break;
                 }
-
-                currentNum++;
             }
 
             return solution;
