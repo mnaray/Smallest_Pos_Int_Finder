@@ -30,7 +30,7 @@ namespace Smallest_Pos_Int_Finder_project
         private void InitializeComponent()
         {
             this.path_text = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.path_input = new System.Windows.Forms.TextBox();
             this.run_button = new System.Windows.Forms.Button();
             this.solution_text = new System.Windows.Forms.Label();
             this.solution = new System.Windows.Forms.Label();
@@ -45,12 +45,12 @@ namespace Smallest_Pos_Int_Finder_project
             this.path_text.TabIndex = 0;
             this.path_text.Text = "File path:";
             // 
-            // textBox1
+            // path_input
             // 
-            this.textBox1.Location = new System.Drawing.Point(41, 218);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(438, 23);
-            this.textBox1.TabIndex = 1;
+            this.path_input.Location = new System.Drawing.Point(41, 218);
+            this.path_input.Name = "path_input";
+            this.path_input.Size = new System.Drawing.Size(438, 23);
+            this.path_input.TabIndex = 1;
             // 
             // run_button
             // 
@@ -60,6 +60,7 @@ namespace Smallest_Pos_Int_Finder_project
             this.run_button.TabIndex = 2;
             this.run_button.Text = "Run";
             this.run_button.UseVisualStyleBackColor = true;
+            this.run_button.Click += new System.EventHandler(this.run_button_Click);
             // 
             // solution_text
             // 
@@ -89,7 +90,7 @@ namespace Smallest_Pos_Int_Finder_project
             this.Controls.Add(this.solution);
             this.Controls.Add(this.solution_text);
             this.Controls.Add(this.run_button);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.path_input);
             this.Controls.Add(this.path_text);
             this.Name = "MainWindow";
             this.Text = "Smallest Positive Int Finder";
@@ -101,7 +102,7 @@ namespace Smallest_Pos_Int_Finder_project
         #endregion
 
         private System.Windows.Forms.Label path_text;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox path_input;
         private System.Windows.Forms.Button run_button;
         private System.Windows.Forms.Label solution_text;
         private System.Windows.Forms.Label solution;
