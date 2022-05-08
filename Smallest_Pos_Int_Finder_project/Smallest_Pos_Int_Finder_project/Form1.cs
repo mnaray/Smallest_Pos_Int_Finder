@@ -36,14 +36,35 @@ namespace Smallest_Pos_Int_Finder_project
         public static int SmallestPositiveInt(int[] A)
         {
             int solution = 0;
+            int numToCheck = 1;
+            int firstPositiveIndex = 0;
             Array.Sort(A);
 
             foreach (int item in A)
             {
-                if (!Array.Exists(A, ele => ele == item) && item > 0)
+                if (item > 0)
                 {
-                    solution = item;
+                    firstPositiveIndex = Array.IndexOf(A, item);
                     break;
+                }
+            }
+
+            int[] onlyPositives = new int[A.Length - 1 - firstPositiveIndex];
+
+            for (int i = 0; i < A.Length - 1 - firstPositiveIndex; i++)
+            {
+                onlyPositives[i] = A[firstPositiveIndex + i];
+            }
+
+            foreach (int item in onlyPositives)
+            {
+                if (numToCheck == item)
+                {
+                    numToCheck++;
+                }
+                else
+                {
+                    solution = numToCheck;
                 }
             }
 
