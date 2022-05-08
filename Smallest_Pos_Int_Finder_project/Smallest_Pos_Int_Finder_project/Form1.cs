@@ -30,11 +30,23 @@ namespace Smallest_Pos_Int_Finder_project
 
             // MyFunction
         }
-        public static int SmallestPositiveInt()
+        public static int SmallestPositiveInt(int[] A)
         {
-            // my function
+            int currentNum = 1;
+            int solution = 0;
 
-            return 1;
+            while (true)
+            {
+                if (!(Array.Exists(A, ele => ele == currentNum)))
+                {
+                    solution = currentNum;
+                    break;
+                }
+
+                currentNum++;
+            }
+
+            return solution;
         }
     }
 }
