@@ -57,6 +57,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="info_text.Text" xml:space="preserve">
+    <value>This tool takes a file as an input and outputs a number.
+Requirements for the file:
+- It has to be plain text (not rich text such as .pdf or .docx)
+- The file needs to have one single integer on each line
+- There are only integers allowed, no words or other types of text
+
+The number that is going to be displayed below the solution label, is the smalles, positive Integer in
+that list of numbers.
+Depending on the amount of numbers in the file, it might take a while until you get the solution, just
+let the thing do its thing :P</value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>123</value>
   </metadata>
